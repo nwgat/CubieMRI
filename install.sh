@@ -14,9 +14,3 @@ echo "" >>
 wget -O $JMRI_PACKAGE_NAME "$JMRI_URL"
 tar zxvf $JMRI_PACKAGE_NAME
 
-# jmri user
-useradd -m -s /bin/bash -G adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,netdev,input jmri
-echo -e "jmri:trains" | (chpasswd)
-
-
-echo "Remote Desktop IP is $ip"
