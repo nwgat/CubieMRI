@@ -14,26 +14,11 @@ apt-get install oracle-java7-installer librxtx
 # install jmri 
 wget -O $JMRI_PACKAGE_NAME "$JMRI_URL"
 tar zxvf $JMRI_PACKAGE_NAME
-ln -l /usr/lib/jvm/java-7-oracle/jre/lib/librxtxSerial.so /usr/lib/jni/librxtxSerial.so
+ln -l /usr/lib/jvm/java-7-oracle/jre/lib/librxtxSerial.so /home/jmri/JMRI/lib/librxtxSerial.so
 
 # setting it up
-echo "su cubie -c "screen -dmS -X /home/cubie/Desktop/JMRI/JmriFaceless"" >>
+echo "su cubie -c "screen -dmS -X /home/jmri/JMRI/JmriFaceless"" >>
 
-echo "[Desktop Entry]
-Encoding=UTF-8
-Type=Application
-Name=PanelPro
-Exec=/home/cubie/Desktop/JMRI/PanelPro
-Icon=
-p" >> /home/cubie/Desktop/PanelPro.desktop
-
- 
-echo "[Desktop Entry]
-Encoding=UTF-8
-Type=Application
-Name=DecoderPro
-Exec=/home/cubie/Desktop/JMRI/DecoderPro
-Icon=" > /home/cubie/Desktop/DecoderPro.desktop
 
 # details
 echo "Details"
