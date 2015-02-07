@@ -20,7 +20,7 @@ redirect_stderr=true
 startsecs=5" > /etc/supervisor/conf.d/jmri.conf
 
 echo "[inet_http_server] 
-port=*:9001" >> /etc/supervisor/supervisord.conf
+port=*:80" >> /etc/supervisor/supervisord.conf
 
 # install jmri
 cd $HOME && curl -L http://sourceforge.net/projects/jmri/files/production%20files/JMRI.3.10.1-r28327.tgz > /home/cubie/JMRI.tgz
@@ -30,6 +30,6 @@ ln -s /usr/lib/jvm/java-7-oracle/jre/lib/librxtxSerial.so $HOME/JMRI/lib/librxtx
 
 # details
 echo "<<< Service Control WebUI >>>"
-echo "http://$ip:9001"
+echo "http://$ip"
 echo "config files on SFTP: $ip:22"
 echo "all done"
