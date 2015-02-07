@@ -29,7 +29,7 @@ port=*:80" >> /etc/supervisor/supervisord.conf
 cd $HOME && curl -L http://sourceforge.net/projects/jmri/files/production%20files/JMRI.3.10.1-r28327.tgz > /home/$usr/JMRI.tgz
 cd /home/$usr/ && tar xvf JMRI.tgz
 chown $usr:$usr -R /home/$usr/
-ln -s /usr/lib/jvm/java-7-oracle/jre/lib/librxtxSerial.so $HOME/JMRI/lib/librxtxSerial.so
+ln -s /usr/lib/jvm/java-7-oracle/jre/lib/librxtxSerial.so /home/$usr/JMRI/lib/librxtxSerial.so
 
 # details
 echo "<<< Service Control WebUI >>>"
